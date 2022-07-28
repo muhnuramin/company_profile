@@ -2,6 +2,20 @@
 
 class Galeri_m extends CI_Model
 {
+	public function getAllgalery()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_galeri');
+		$return = $this->db->get('');
+		return $return->result();
+	}
+	public function getAllalbum()
+	{
+		$this->db->select('*');
+		$this->db->from('tb_album');
+		$return = $this->db->get('');
+		return $return->result();
+	}
 	public function getAll1()
 	{
 		return $this->db->get('tb_galeri');
